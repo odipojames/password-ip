@@ -81,7 +81,17 @@ class TestCredentials(unittest.TestCase):
         '''
         function to clear creds_list before every test
         '''
-        Credential.creds_list = []    
+        Credential.creds_list = []
+
+    def test_display_credentials(self):
+        '''
+        test to check whether display_creds method displays the credentials entered
+        '''
+        self.new_cred.save_credentials()
+        instagram = Credential('dan','instagram','damunza','1234')
+        instagram.save_credentials()
+        self.assertEqual(Credential.display_creds(),Credential.creds_list)
+       
 
 if __name__ == '__main__':
   unittest.main()
