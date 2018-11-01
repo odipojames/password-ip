@@ -1,3 +1,4 @@
+
 import random
 import string
 import pyperclip
@@ -19,13 +20,8 @@ class User:
         '''
         method that adds user(s) into the user_list
         '''
-    def save_user(self):
-        '''
-        method that adds user(s) into the user_list
-        '''
 
         User.users_list.append(self)
-
 
 class Credential:
     '''
@@ -54,8 +50,8 @@ class Credential:
         self.account_name = account_name
         self.password = password
 
-     def save_credentials(self):
-            '''
+    def save_credentials(self):
+        '''
         method that saves credential(s) into the creds_list
         '''
 
@@ -68,4 +64,3 @@ class Credential:
         a=string.printable
         pas_gen = ''.join(random.sample(a ,int(size)))
         return pas_gen
-    

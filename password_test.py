@@ -33,7 +33,7 @@ class TestUser(unittest.TestCase):
         '''
         cleans up after each test runs
         '''
-        User.users_list = [] 
+        User.users_list = []
 
 
 class TestCredentials(unittest.TestCase):
@@ -55,7 +55,21 @@ class TestCredentials(unittest.TestCase):
                 return current_user
                 self.assertEqual(current_user,Credential.check_user(nwC.firts_name,nwC.password))
 
+    def setUp(self):
+        '''
+        creates accounts before each test
+        '''
+        self.new_cred =Credential("odipo","fb","james","1234")
+
+    def test_init_(self):
+        '''
+        test to check the creation of new user details
+        '''
+        self.assertEqual(self.new_cred.user_name,'odipo')
+        self.assertEqual(self.new_cred.site_name,'fb')
+        self.assertEqual(self.new_cred.account_name,'james')
+        self.assertEqual(self.new_cred.password,'1234')
 
 
 if __name__ == '__main__':
-    unittest.main()
+  unittest.main()
