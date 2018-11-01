@@ -64,3 +64,20 @@ class Credential:
         a=string.printable
         pas_gen = ''.join(random.sample(a ,int(size)))
         return pas_gen
+
+    @classmethod
+    def display_creds(cls):
+        '''
+        method that returns the contents of the creds_list
+        '''
+        return  cls.creds_list
+
+    @classmethod
+    def find_site(cls,site_name):
+        '''
+        method that returns the credentials for the site that is searched for
+        '''
+        for cred in cls.creds_list:
+            if cred.site_name == site_name:
+                return cred
+    
