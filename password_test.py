@@ -1,6 +1,6 @@
 import unittest # importing the unittest module
 import pyperclip
-from password import User  #first import user c class
+from password import User,Credential  # import user and credential class
 
 class TestUser(unittest.TestCase):
     '''
@@ -34,6 +34,28 @@ class TestUser(unittest.TestCase):
         cleans up after each test runs
         '''
         User.users_list = [] 
+
+
+class TestCredentials(unittest.TestCase):
+    '''
+    a test class that tests the behaviours of the credentials class
+    '''
+    def test_confirm_user(self):
+        '''
+        a test to check whether the user that is trying to log in is a registered user
+        '''
+        self.new_user = User("odipo","james","aoko122")
+        self.new_user.save_user()
+        nwC=User("aaa","bbb","aoko122")
+        nwC.save_user()
+
+        for user in User.users_list:
+            if user.first_name == nwC.first_name and user.password == nwC.password:
+                current_user = user.first_name
+                return current_user
+                self.assertEqual(current_user,Credential.check_user(nwC.firts_name,nwC.password))
+
+
 
 if __name__ == '__main__':
     unittest.main()
