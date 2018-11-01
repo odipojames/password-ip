@@ -53,3 +53,19 @@ class Credential:
         self.site_name = site_name
         self.account_name = account_name
         self.password = password
+
+     def save_credentials(self):
+            '''
+        method that saves credential(s) into the creds_list
+        '''
+
+        Credential.creds_list.append(self)
+
+    def generate_password(size):
+        '''
+        function that generates a random password of length size
+        '''
+        a=string.printable
+        pas_gen = ''.join(random.sample(a ,int(size)))
+        return pas_gen
+    
