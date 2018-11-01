@@ -19,3 +19,10 @@ class User:
         '''
         method that adds user(s) into the user_list
         '''
+    def save_user(self):
+        '''
+        method that adds user(s) into the user_list
+        '''
+
+        User.users_list.append(self)
+    
