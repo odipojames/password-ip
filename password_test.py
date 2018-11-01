@@ -102,6 +102,16 @@ class TestCredentials(unittest.TestCase):
         creds_exist = Credential.find_site('Facebook')
         self.assertEqual(creds_exist,facebook)
 
+    # after addition of pyperclip
+    def test_copy_password(self):
+        '''
+        test to confirm that the password  being copied
+        '''
+        self.new_cred.save_credentials()
+        instagram = Credential('odipo','Facebook','james','1234')
+        instagram.save_credentials()
+        Credential.copy_password('Facebook')
+        self.assertEqual(self.new_cred.password,pyperclip.paste())
 
 
 if __name__ == '__main__':
