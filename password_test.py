@@ -59,14 +59,14 @@ class TestCredentials(unittest.TestCase):
         '''
         creates accounts before each test
         '''
-        self.new_cred =Credential("odipo","fb","james","1234")
+        self.new_cred =Credential("odipo","facebook","james","1234")
 
     def test_init_(self):
         '''
         test to check the creation of new user details
         '''
         self.assertEqual(self.new_cred.user_name,'odipo')
-        self.assertEqual(self.new_cred.site_name,'fb')
+        self.assertEqual(self.new_cred.site_name,'facebook')
         self.assertEqual(self.new_cred.account_name,'james')
         self.assertEqual(self.new_cred.password,'1234')
 
@@ -88,10 +88,21 @@ class TestCredentials(unittest.TestCase):
         test to check whether display_creds method displays the credentials entered
         '''
         self.new_cred.save_credentials()
-        instagram = Credential('dan','instagram','damunza','1234')
-        instagram.save_credentials()
+        fb= Credential('odipo','facebook','james','1234')
+        fb.save_credentials()
         self.assertEqual(Credential.display_creds(),Credential.creds_list)
-       
+
+    def test_find_site_creds(self):
+        '''
+        test for whether find_site method returns the correct site credentials
+        '''
+        self.new_cred.save_credentials()
+        facebook = Credential('odipo','Facebook','james','1234')
+        facebook.save_credentials()
+        creds_exist = Credential.find_site('Facebook')
+        self.assertEqual(creds_exist,facebook)
+
+
 
 if __name__ == '__main__':
   unittest.main()
