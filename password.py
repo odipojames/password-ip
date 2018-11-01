@@ -80,4 +80,7 @@ class Credential:
         for cred in cls.creds_list:
             if cred.site_name == site_name:
                 return cred
-    
+    @classmethod
+    def copy_password(cls,site_name):
+        pass_pick= Credential.find_site(site_name)
+        return pyperclip.copy(pass_pick.password)
