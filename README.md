@@ -1,6 +1,8 @@
 Password Locker App
 Built By : Odipo James
-Description
+
+
+Description:
 this is an application made by python and run on the terminal that allows the user to sing up/in  and save the passwords to their internet sites on the application
 
 Specs
@@ -15,7 +17,7 @@ python3.6
 
 pyperclip
 cloning
-in the terminal run the following:
+in the terminal run the following:https://odipojames.github.io/password-ip/
 
 $ git clone
 $ cd password-locker
