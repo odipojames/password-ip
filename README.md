@@ -16,29 +16,23 @@ the user is then able to enter the site information; The site name , the account
 There is an option for the application to generate a password of the length specified by the user
 the user is then able to copy the password generated or input onto a clipboard and paste it wherever needed
 the user can then be able to exit the application
-Setup Requirements
+
+Technology used:
 python3.6
 
+Setup Requirements:
 pyperclip
+python3.6
 
 
-cloning:
+Running application:
+To use the app run the following commands in your terminal;
 
-
-in the terminal run the following:https://odipojames.github.io/password-ip/
-
-
-
-$ git clone
-$ cd password-locker
-Running the application
-to run the application run the following on the terminal:
-
+$ git clon 'https://odipojames.github.io/password-ip/'
 $ chmod +x run.py
 $ ./run.py
-Technologies Used
-python3.6
-Contact information
+
+Contact information:
 for more input on the application contact via odipojames12@gmail.com
 
 Liscence
