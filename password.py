@@ -5,7 +5,7 @@ import pyperclip
 
 class User:
     '''
-    a class that defines the name(s) and password  of the user
+    a class that defines the name and password  of the user
     '''
     users_list = []
 
@@ -18,7 +18,7 @@ class User:
 
     def save_user(self):
         '''
-        method that adds user(s) into the user_list
+        method that adds user into the user_list
         '''
 
         User.users_list.append(self)
@@ -52,7 +52,7 @@ class Credential:
 
     def save_credentials(self):
         '''
-        method that saves credential(s) into the creds_list
+        method that saves credentials into the creds_list
         '''
 
         Credential.creds_list.append(self)
