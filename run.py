@@ -59,9 +59,9 @@ def main():
     print ('Welcome to My Password Locker App!')
     while True:
         print('*'*50)
-        print('use the following short-codes to navigate: \n cp-create profile \n li-log in \n ex-exit')
+        print('use the following short-codes to navigate: \n cp-create profile \n li-log in \n qt-quit')
         short_code = input('Enter short-code: ').lower().strip()
-        if short_code == 'ex':
+        if short_code == 'qt':
             break
 
         elif short_code == 'cp':
@@ -89,10 +89,10 @@ def main():
                 print (' ')
                 while True:
                     print('-'*50)
-                    print ('Nav-codes:\n cs-create site info \n ds-display site info \n cpy-copy password\n ex-exit')
+                    print ('Nav-codes:\n cs-create site info \n ds-display site info \n cpy-copy password\n qt-quit')
                     nav_code = input('Enter Nav-code: ').strip().lower()
                     print('-'*50)
-                    if nav_code == 'ex':
+                    if nav_code == 'qt':
                         print(' ')
                         print(f'Goodbye{user_name}')
                         break
@@ -120,7 +120,7 @@ def main():
                                 size = int(input('How long should your password be: '))
                                 password =generate_password(size)
                                 break
-                            elif option == 'ex':
+                            elif option == 'qt':
                                 break
                             else:
                                 print('No such option! Try again')
