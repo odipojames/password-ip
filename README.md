@@ -1,18 +1,18 @@
-Password Locker
+Password Locker App
 Built By : Odipo James
 Description
-this is an application made by python and run on the terminal that allows the user to enter their personal details and save the passwords to their internet sites on the application
+this is an application made by python and run on the terminal that allows the user to sing up/in  and save the passwords to their internet sites on the application
 
 Specs
-the user enters their personal details; their names and their password
-the user is then able to log in into the application if their personal details match the ones already saved in the application
+the user enters his/her details; their names and their password
+the user is then able to log in into the application only if their personal details match the ones already saved in the application
 the user is then able to enter the site information; The site name , the account name and the password
 There is an option for the application to generate a password of the length specified by the user
 the user is then able to copy the password generated or input onto a clipboard and paste it wherever needed
 the user can then be able to exit the application
 Setup Requirements
 python3.6
-pip
+
 pyperclip
 cloning
 in the terminal run the following:
