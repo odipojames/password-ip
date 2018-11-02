@@ -5,7 +5,11 @@ Built By : Odipo James
 Description:
 this is an application made by python and run on the terminal that allows the user to sing up/in  and save the passwords to their internet sites on the application
 
-Specs
+
+
+Specs:
+
+
 the user enters his/her details; their names and their password
 the user is then able to log in into the application only if their personal details match the ones already saved in the application
 the user is then able to enter the site information; The site name , the account name and the password
@@ -16,8 +20,14 @@ Setup Requirements
 python3.6
 
 pyperclip
-cloning
+
+
+cloning:
+
+
 in the terminal run the following:https://odipojames.github.io/password-ip/
+
+
 
 $ git clone
 $ cd password-locker
