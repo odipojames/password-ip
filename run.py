@@ -56,7 +56,7 @@ def copy_password(site_name):
 
 def main():
     print (' ')
-    print ('Welcome to Password Locker')
+    print ('Welcome to My Password Locker App!')
     while True:
         print('*'*50)
         print('use the following short-codes to navigate: \n cp-create profile \n li-log in \n ex-exit')
