@@ -26,11 +26,15 @@ python3.6
 
 
 Running application:
+Live link https://odipojames.github.io/password-ip/
+
 To use the app run the following commands in your terminal;
 
 $ git clon 'https://odipojames.github.io/password-ip/'
 $ chmod +x run.py
 $ ./run.py
+
+
 
 Contact information:
 for more input on the application contact via odipojames12@gmail.com
